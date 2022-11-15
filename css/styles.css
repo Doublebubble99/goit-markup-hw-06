@@ -68,7 +68,7 @@ p {
   line-height: calc(16 / 14);
   letter-spacing: 0.02em;
   color: var(--dark-black-color);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color var(--duration) var(--bezier);
 }
 .hero-header .portfolio,
 .portfolio-header .studio {
@@ -99,7 +99,7 @@ p {
   transform: translateX(-100%);
   background-color: var(--blue-color);
   bottom: 0;
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform var(--duration) var(--bezier);
   min-width: 100%;
 }
 .hero-header .portfolio:hover::after,
@@ -117,7 +117,7 @@ p {
   line-height: calc(16 / 14);
   letter-spacing: 0.02em;
   color: var(--grey-color);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color var(--duration) var(--bezier);
 }
 .mail-icon,
 .phone-icon {
@@ -219,7 +219,7 @@ p {
   height: 50px;
   padding: 0;
   border: transparent;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color var(--duration) var(--bezier);
 }
 .button:active,
 .button:hover,
@@ -378,10 +378,10 @@ p {
   width: 100%;
   height: 100%;
   border-radius: 50%;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color var(--duration) var(--bezier);
 }
 .link-icon .team-icon {
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill var(--duration) var(--bezier);
 }
 .team-icon {
   fill: #afb1b8;
@@ -390,7 +390,7 @@ p {
 }
 .link-icon:hover,
 .link-icon:focus {
-  background-color: #2196f3;
+  background-color: var(--blue-color);
 }
 .link-icon:hover > .team-icon,
 .link-icon:focus > .team-icon {
@@ -446,7 +446,7 @@ p {
   color: var(--white-color);
 }
 .address .link {
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color var(--duration) cubic-bezier(0.4, 0, 0.2, 1);
 }
 .address .link:hover,
 .address .link:focus {
@@ -478,7 +478,7 @@ p {
 }
 .footer-icon-list .link-icon:hover,
 .footer-icon-list .link-icon:focus {
-  background-color: #2196f3;
+  background-color: var(--blue-color);
 }
 .footer-icon-list .link-icon:not(:last-child) {
   margin-right: 10px;
@@ -530,7 +530,7 @@ p {
 .button-footer {
   width: 200px;
   height: 50px;
-  background-color: #2196f3;
+  background-color: var(--blue-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   cursor: pointer;
@@ -544,6 +544,8 @@ p {
   padding: 10px 28px;
   letter-spacing: 0.06em;
   color: #ffffff;
+  font-family: inherit;
+  border: transparent;
 }
 .send-icon {
   fill: #fff;
@@ -561,9 +563,9 @@ p {
   background-color: #f5f4fa;
   border-radius: 4px;
   border: transparent;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color var(--duration) var(--bezier),
+    background-color var(--duration) var(--bezier),
+    box-shadow var(--duration) var(--bezier);
 }
 .filters-first {
   padding: 6px 25px;
@@ -625,7 +627,7 @@ p {
 }
 .portfolio-link {
   display: block;
-  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: box-shadow var(--duration) var(--bezier);
 }
 .portfolio-link:hover,
 .portfolio-link:focus {
@@ -654,7 +656,7 @@ p {
   right: 0;
   background-color: rgba(33, 150, 243, 0.9);
   transform: translateY(100%);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform var(--duration) var(--bezier);
 }
 .overlay-description {
   font-size: 18px;
@@ -679,7 +681,7 @@ p {
   border-radius: 4px;
   margin-right: auto;
   margin-left: auto;
-  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border var(--duration) var(--bezier);
 }
 .logo-list-item:not(:last-child) {
   margin-right: 30px;
@@ -687,7 +689,7 @@ p {
 .logo-item {
   display: flex;
   fill: #afb1b8;
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill var(--duration) var(--bezier);
 }
 .logo-link {
   display: inline-flex;
@@ -698,7 +700,7 @@ p {
 }
 .logo-list-item:hover,
 .logo-list-item:focus {
-  border: 1px solid #2196f3;
+  border: 1px solid var(--blue-color);
 }
 .logo-list-item:hover .logo-item,
 .logo-list-item:focus .logo-item {
@@ -717,8 +719,7 @@ p {
   left: 50%;
   z-index: 2;
   transform: translate(-50%, -50%) scale(1);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    top 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform var(--duration) var(--bezier), top 250ms var(--bezier);
   padding: 40px;
 }
 .backdrop {
@@ -728,8 +729,8 @@ p {
   right: 0;
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.2);
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity var(--duration) var(--bezier),
+    visibility var(--duration) var(--bezier);
 }
 .backdrop.is-hidden .modal {
   transform: scale(0.1);
@@ -753,6 +754,11 @@ p {
   justify-content: center;
   width: 30px;
   height: 30px;
+  transition: fill var(--duration) var(--bezier);
+}
+.modal-icon:hover,
+.modal-icon:focus {
+  fill: var(--blue-color);
 }
 @keyframes changeposition {
   from {
@@ -788,6 +794,7 @@ p {
   letter-spacing: 0.01em;
   color: #757575;
   margin-bottom: 4px;
+  position: relative;
 }
 .callback-wrap {
   display: flex;
@@ -801,10 +808,81 @@ p {
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   padding: 12px 16px;
+  margin-bottom: 20px;
+  margin-top: 4px;
+}
+.textarea-input:focus-within {
+  border-color: var(--blue-color);
+  outline: none;
 }
 .textarea-input::placeholder {
   font-size: 12px;
   line-height: calc(14 / 12);
   letter-spacing: 0.01em;
   color: rgba(117, 117, 117, 0.5);
+}
+.icon-position {
+  position: relative;
+}
+.callback-icons {
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  transform: translateY(-50%);
+}
+.checkbox-icon {
+  fill: #fff;
+}
+.form-label-checkbox {
+  font-size: 14px;
+  line-height: calc(24 / 14);
+  color: #757575;
+  display: inline-flex;
+  align-items: center;
+  margin-bottom: 30px;
+  justify-content: space-evenly;
+}
+.agree-text {
+  color: var(--blue-color);
+  text-decoration: underline;
+}
+.checkbox-icon {
+  width: 16px;
+  height: 15px;
+  margin-left: 12px;
+  border-radius: 2px;
+  border: 1px solid #212121;
+  background-origin: border-box;
+}
+.modal-checkbox:checked + .checkbox-icon {
+  background-color: var(--blue-color);
+  border-color: transparent;
+}
+.icon-position:focus-within {
+  fill: var(--blue-color);
+}
+.form-input:focus-within {
+  outline: none;
+  border-color: var(--blue-color);
+}
+.modal-button {
+  cursor: pointer;
+  width: 200px;
+  height: 50px;
+  font-family: inherit;
+  background-color: var(--blue-color);
+  font-weight: 700;
+  font-size: 16px;
+  line-height: calc(30 / 16);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 0.06em;
+  color: #ffffff;
+  margin-right: auto;
+  margin-left: auto;
+  background: var(--blue-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border: transparent;
 }

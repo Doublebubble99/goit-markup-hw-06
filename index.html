@@ -409,35 +409,42 @@
           <p class="callback" id="modal-callback">Залиште свої дані, ми вам передзвонимо</p>
           <div class="callback-wrap">
             <label class="form-label" for="name-input">Ім'я</label>
-            <input class="form-input" type="text" id="name-input" name="name">
-            <svg class="callback-icons" width="18" height="18">
-              <use href="./images/icons.svg#person-black-icon"></use>
-            </svg>
+            <div class="icon-position">
+              <input class="form-input" type="text" id="name-input" name="name">
+              <svg class="callback-icons" width="18" height="18">
+                <use href="./images/icons.svg#person-black-icon"></use>
+              </svg>
+            </div>
           </div>
           <div class="callback-wrap">
             <label class="form-label" for="tel-input">Телефон</label>
-            <input class="form-input" type="tel" id="tel-input" name="tel">
-            <svg class="callback-icons" width="18" height="18">
-              <use href="./images/icons.svg#phone-black-icon"></use>
-            </svg>
+            <div class="icon-position">
+              <input class="form-input" type="tel" id="tel-input" name="tel">
+              <svg class="callback-icons" width="18" height="18">
+                <use href="./images/icons.svg#phone-black-icon"></use>
+              </svg>
+            </div>
           </div>
           <div class="callback-wrap">
             <label class="form-label" for="mail-input">Пошта</label>
-            <input class="form-input" type="email" id="mail-input" name="mail">
-            <svg class="callback-icons" width="18" height="18">
-              <use href="./images/icons.svg#email-black-icon"></use>
-            </svg>
+            <div class="icon-position">
+              <input class="form-input" type="email" id="mail-input" name="mail">
+              <svg class="callback-icons" width="18" height="18">
+                <use href="./images/icons.svg#email-black-icon"></use>
+              </svg>
+            </div>
           </div>
-          <div class="callback-wrap">
+          <div class="comment-wrap">
             <label class="form-label" for="comment-input">Коментар</label>
-            <textarea class="textarea-input" placeholder="Введіть текст"></textarea>
+            <textarea class="textarea-input" id="comment-input" placeholder="Введіть текст"></textarea>
           </div>
-          <input class="modal-checkbox visually-hidden" type="checkbox" id="check-input" name="check" value="agree">
-          <svg class="callback-icons" width="18" height="18">
-            <use href="./images/icons.svg#check-icon"></use>
-          </svg>
-          <label class="form-label-checkbox" for="check-input">Погоджуюся з розсилкою та приймаю<span
-              class="agree-text">Умови договору</span></label>
+          <label class="form-label-checkbox">
+            <input class="modal-checkbox visually-hidden" type="checkbox" name="check" value="agree">
+            <svg class="checkbox-icon" width="18" height="18">
+              <use href="./images/icons.svg#check-icon"></use>
+            </svg>
+            Погоджуюся з розсилкою та приймаю<span class="agree-text">Умови договору</span>
+          </label>
         </div>
         <button type="submit" class="modal-button">Відправити</button>
       </form>
