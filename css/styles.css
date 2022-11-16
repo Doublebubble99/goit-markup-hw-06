@@ -465,6 +465,7 @@ p {
 .container-footer {
   display: flex;
   align-items: baseline;
+  justify-content: space-between;
 }
 .footer-icon-list {
   display: inline-flex;
@@ -513,6 +514,9 @@ p {
   margin-bottom: 9px;
 }
 .footer-email {
+  font-size: 16px;
+  line-height: calc(20 / 16);
+  color: rgba(255, 255, 255, 0.6);
   width: 358px;
   height: 50px;
   padding: 15px 16px;
